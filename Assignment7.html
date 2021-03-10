@@ -3,7 +3,7 @@
 
 <canvas id="myChart"></canvas>
 <script>
-var ctx = document.getElementsById("myChart");
+var ctx = document.getElementsById("myChart").getContext('2d');
 var chart = new Chart(ctx, {
     type: 'bar',
     data: {
