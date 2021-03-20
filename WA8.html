@@ -14,13 +14,13 @@ $.getJSON("some_data.json", function(data_from_file){
 
     var chart = new Chart(ctx, {
         // The type of chart we want to create
-        type: 'bar',
+        type: 'pie',
 
         // The data for our dataset
         data: {
             labels: ['x', 'y'],
             datasets: [{
-                label: 'Fake data',
+                label: 'warnings issued',
                 backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgb(255, 99, 132)',
                 data: [data_from_file["x"], data_from_file["y"]],
