@@ -2,7 +2,7 @@
 <html> 
 <h1> Weekly Assignment 8</h1>
 <p>
-    I used the Denver Police Data from class and looked specifically at warnings issued. There are different kinds of outcomes from police interactions, and I wanted to see the percent chance of getting a warning from the dataset. My analysis can be found <a href="DenverData.ipynb">here</a>
+    I used the Denver Police Data from class and looked specifically at warnings issued. There are different kinds of outcomes from police interactions, and I wanted to see the percent chance of getting a warning from the dataset. My analysis can be found <a href="DenverData.ipynb">here</a>. I filtered the data by warning and by date, then found the perrcentage by using the sum of all cases divided by the cases with a warning issued. 
 </p>
 <canvas id="myChart"></canvas>
 
@@ -24,7 +24,7 @@ $.getJSON("some_data.json", function(data_from_file){
 
         // The data for our dataset
         data: {
-            labels: ['percent chance of arrest/citation/other', 'percent chance of warning received'],
+            labels: ['percent chance of warning', 'percent chance of citation/arrest/other'],
             datasets: [{
                 label: 'police interactions',
                 backgroundColor: 'rgb(41, 98, 213)',
