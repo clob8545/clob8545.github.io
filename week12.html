@@ -220,6 +220,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script src="https://cdnjs.com/libraries/reveal.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -227,8 +228,13 @@
 			Reveal.initialize({
 				hash: true,
 				slideNumber: 'h.vertical',
+				math: {
+      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+      config: 'TeX-AMS_HTML-full',
+      // pass other options into `MathJax.Hub.Config()`
+      TeX: { Macros: { RR: "{\\bf R}" } }
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
 			});
 		</script>
 	</body>
