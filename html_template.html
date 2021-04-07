@@ -9,17 +9,7 @@
 <body>
 	<div id="vis"></div>
 	<script type="text/javascript">
-		var spec = {};  /* JSON dump of your chart's spec */
-		var opt = {"renderer": "canvas", "actions": false};  /* Options for the embedding */
-		vegaEmbed("#vis", spec, opt);
-	</script>
-	
-	<h2>Comparing fuel efficiency and horsepower</h2>
-	<p>Internal combustion engines face a fundamental engineering trade-off: more powerful engines are also less fuel efficient. We can see this relationship clearly in this visualization:</p>
-
-	<script>	
-	var spec={
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+		var spec = {"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "config": {
     "view": {
       "continuousHeight": 300,
@@ -44,8 +34,15 @@
     }
   },
   "mark": "point"
-};
+};  /* JSON dump of your chart's spec */
+		var opt = {"renderer": "canvas", "actions": false};  /* Options for the embedding */
+		vegaEmbed("#vis", spec, opt);
 	</script>
+	
+	<h2>Comparing fuel efficiency and horsepower</h2>
+	<p>Internal combustion engines face a fundamental engineering trade-off: more powerful engines are also less fuel efficient. We can see this relationship clearly in this visualization:</p>
+
+	
 
 	<p>This relationship is interesting because it is non-linear: fuel efficiency drops rapidly with the increase in horsepower.</p>
 
