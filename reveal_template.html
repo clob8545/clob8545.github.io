@@ -30,40 +30,42 @@
 
 				<section>
 					<div id="vis"></div>
-	<script type="text/javascript">
-		var spec = {
-   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": { "url": "data/population.json"},
-  "transform": [
-    {"filter": "datum.year == 2000"},
-    {"calculate": "datum.sex == 2 ? 'Female' : 'Male'", "as": "gender"}
-  ],
-  "width": {"step": 12},
-  "mark": "bar",
-  "encoding": {
-    "column": {
-      "field": "age", "type": "ordinal", "spacing": 10
-    },
-    "y": {
-      "aggregate": "sum", "field": "people",
-      "title": "population",
-      "axis": {"grid": false}
-    },
-    "x": {
-      "field": "gender",
-      "axis": {"title": ""}
-    },
-    "color": {
-      "field": "gender",
-      "scale": {"range": ["#675123", "#ca8861"]}
-    }
-  },
-  "config": {
-    "view": {"stroke": "transparent"},
-    "axis": {"domainWidth": 1}
-  }
-}
-
+					<script type="text/javascript">
+					var spec = {
+					   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+					  "data": { "url": "data/population.json"},
+					  "transform": [
+					    {"filter": "datum.year == 2000"},
+					    {"calculate": "datum.sex == 2 ? 'Female' : 'Male'", "as": "gender"}
+					  ],
+					  "width": {"step": 12},
+					  "mark": "bar",
+					  "encoding": {
+					    "column": {
+					      "field": "age", "type": "ordinal", "spacing": 10
+					    },
+					    "y": {
+					      "aggregate": "sum", "field": "people",
+					      "title": "population",
+					      "axis": {"grid": false}
+					    },
+					    "x": {
+					      "field": "gender",
+					      "axis": {"title": ""}
+					    },
+					    "color": {
+					      "field": "gender",
+					      "scale": {"range": ["#675123", "#ca8861"]}
+					    }
+					  },
+					  "config": {
+					    "view": {"stroke": "transparent"},
+					    "axis": {"domainWidth": 1}
+					  }
+					}
+	var opt = {"renderer": "canvas", "actions": false};  /* Options for the embedding */
+					
+						vegaEmbed("#vis0", spec, opt);
 	
 		</script>		
 		</section>
