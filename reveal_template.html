@@ -25,7 +25,41 @@
 				</section>
 
 				<section>
-					<p> Code block for first vis:</p>
+					<pre><code data-trim data-noescape>
+				<script type="text/template">
+					<section>
+						<div id="vis"></div>
+					<script type="text/javascript">
+					var spec = {
+						  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+						  "config": {
+						    "view": {
+						      "continuousHeight": 300,
+						      "continuousWidth": 400
+						    }
+						  },
+						  "data": {
+						    "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/crimea.json"
+						  },
+						  "encoding": {
+						   
+						    "x": {
+						      "field": "date",
+						      "type": "ordinal"
+						    },
+						    "y": {
+						      "field": "wounds",
+						      "type": "quantitative"
+						    }
+						  },
+						  "mark": "bar"
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#vis", spec, opt)
+					</section>
+	
+						</script>		
+  </script></code></pre></section>
 				</section>
 
 				<section>
