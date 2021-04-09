@@ -32,7 +32,7 @@
 					<div id="vis"></div>
 					<script type="text/javascript">
 					var spec = {
-					   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+					   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
 					  "data": { "url": "https://raw.githubusercontent.com/vega/vega/master/docs/data/population.json"},
 					  "transform": [
 					    {"filter": "datum.year == 2000"},
@@ -47,11 +47,11 @@
 					    "y": {
 					      "aggregate": "sum", "field": "people",
 					      "title": "population",
-					      "axis": {"grid": false; "title":"quantitative"}
+					      "axis": {"grid": false; "type":"quantitative"}
 					    },
 					    "x": {
 					      "field": "gender",
-					      "axis": {"title": "qualitative"}
+					      "axis": {"type": "qualitative"}
 					    },
 					    "color": {
 					      "field": "gender",
@@ -67,8 +67,8 @@
 					
 						vegaEmbed("#vis0", spec, opt);
 	
-					</script>		
-				</section>
+						</script>		
+					</section>
 
 				<section>
 					
