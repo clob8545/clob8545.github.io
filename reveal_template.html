@@ -61,7 +61,7 @@
 	
 						</script>		
   </script></code></pre></section>
-				</section>
+				
 
 				<section>
 					<div id="vis"></div>
@@ -97,8 +97,43 @@
 					</section>
 
 					<section>
-						<p> code block for second vis</p>
+						<h1 style="font-size:50px"> Now I'm using the same dataset but looking at disease rather than wounds</h1>
+						<pre><code data-trim data-noescape>
+				<script type="text/template">
+					<section>
+						<div id="vis2"></div>
+					<script type="text/javascript">
+					var spec = {
+						  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+						  "config": {
+						    "view": {
+						      "continuousHeight": 300,
+						      "continuousWidth": 400
+						    }
+						  },
+						  "data": {
+						    "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/crimea.json"
+						  },
+						  "encoding": {
+						   
+						    "x": {
+						      "field": "date",
+						      "type": "ordinal"
+						    },
+						    "y": {
+						      "field": "disease",
+						      "type": "quantitative"
+						    }
+						  },
+						  "mark": "bar"
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#vis2", spec, opt)
 					</section>
+	
+						</script>		
+  </script></code></pre></section>
+					
 				<section>
 						<div id="vis2"></div>
 					<script type="text/javascript">
