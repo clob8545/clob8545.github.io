@@ -88,7 +88,29 @@
 
 					<section>
 						<h2>In-class Exercise 2</h2>
-						<p>Your visualization goes here!</p>
+						<div id="vis-area"></div>
+						<script type="text/javascript">
+						var spec = {
+							"width": 300,
+							"height": 200,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/co2-concentration.csv"
+							},
+							"mark": "area",
+							"encoding": {
+								"x": {
+									"type": "temporal", 
+									"field": "Date",
+								},
+								"y": {
+									"field": "CO2",
+									"type": "quantitative"
+								}
+							}
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#vis-area", spec, opt);
+						</script>
 					</section>
 				</section>
 
