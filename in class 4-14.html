@@ -94,17 +94,19 @@
 							"width": 300,
 							"height": 200,
 							"data": {
-								"url": "https://vega.github.io/vega-datasets/data/co2-concentration.csv"
+								"url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/crimea.json"
 							},
-							"mark": "area",
+							"mark": "bar", "color":orange
 							"encoding": {
 								"x": {
 									"type": "temporal", 
 									"field": "Date",
+									"titleFontSize":15
 								},
 								"y": {
-									"field": "CO2",
+									"field": "wounds",
 									"type": "quantitative"
+									"titleFontSize":15
 								}
 							}
 						};
