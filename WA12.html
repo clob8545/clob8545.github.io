@@ -1,0 +1,191 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Weekly assignment 11: Vega in Reveal.js</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.19.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1"></script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Weekly Assignment 11: Vega in reveal.js</h3>
+					
+				</section>
+
+				<section>
+					<h1 style="font-size:50px"> My code for the following bar chart looking at wounds by date in this crime dataset</h1>
+					<pre><code data-trim data-noescape>
+				<script type="text/template">
+					<section>
+						<div id="vis"></div>
+					<script type="text/javascript">
+					var spec = {
+						  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+						  "config": {
+						    "view": {
+						      "continuousHeight": 300,
+						      "continuousWidth": 400
+						    }
+						  },
+						  "data": {
+						    "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/crimea.json"
+						  },
+						  "encoding": {
+						   
+						    "x": {
+						      "field": "date",
+						      "type": "ordinal"
+						    },
+						    "y": {
+						      "field": "wounds",
+						      "type": "quantitative"
+						    }
+						  },
+						  "mark": "bar"
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#vis", spec, opt)
+					</section>
+	
+						</script>		
+  </script></code></pre></section>
+				
+
+				<section>
+					<div id="vis"></div>
+					<script type="text/javascript">
+					var spec = {
+						  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+						  "config": {
+						    "view": {
+						      "continuousHeight": 300,
+						      "continuousWidth": 400
+						    }
+						  },
+						  "data": {
+						    "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/crimea.json"
+						  },
+						  "encoding": {
+						   
+						    "x": {
+						      "field": "date",
+						      "type": "ordinal"
+						    },
+						    "y": {
+						      "field": "wounds",
+						      "type": "quantitative"
+						    }
+						  },
+						  "mark": "bar"
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#vis", spec, opt)
+	
+						</script>		
+					</section>
+
+					<section>
+						<h1 style="font-size:50px"> Now I'm using the same dataset but looking at disease rather than wounds</h1>
+						<pre><code data-trim data-noescape>
+				<script type="text/template">
+					<section>
+						<div id="vis2"></div>
+					<script type="text/javascript">
+					var spec = {
+						  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+						  "config": {
+						    "view": {
+						      "continuousHeight": 300,
+						      "continuousWidth": 400
+						    }
+						  },
+						  "data": {
+						    "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/crimea.json"
+						  },
+						  "encoding": {
+						   
+						    "x": {
+						      "field": "date",
+						      "type": "ordinal"
+						    },
+						    "y": {
+						      "field": "disease",
+						      "type": "quantitative"
+						    }
+						  },
+						  "mark": "bar"
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#vis2", spec, opt)
+					</section>
+	
+						</script>		
+  </script></code></pre></section>
+					
+				<section>
+						<div id="vis2"></div>
+					<script type="text/javascript">
+					var spec = {
+						  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+						  "config": {
+						    "view": {
+						      "continuousHeight": 300,
+						      "continuousWidth": 400
+						    }
+						  },
+						  "data": {
+						    "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/crimea.json"
+						  },
+						  "encoding": {
+						   
+						    "x": {
+						      "field": "date",
+						      "type": "ordinal"
+						    },
+						    "y": {
+						      "field": "disease",
+						      "type": "quantitative"
+						    }
+						  },
+						  "mark": "bar"
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#vis2", spec, opt)
+	
+						</script>		
+					</section>
+					<section>
+						<h1 style="font-size:50px"> Although I am not sure the context of the data, it is clear that disease was more prevalent than wounds in this dataset from 1855, which is not surprising because smallpox, TB, cholera, and measles were common during this era.</h1>
+					</section>
+
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h/v',
+				plugins: [ RevealHighlight ]
+				// Learn about plugins: https://revealjs.com/plugins/
+				
+			});
+		</script>
+	</body>
+</html>
