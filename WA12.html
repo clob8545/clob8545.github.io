@@ -88,12 +88,9 @@
 						      "type": "quantitative"
 						    }
 						  },
-						  "mark": "bar",
-						  "color":{
-						  	"value":"red"
-
-
-						  },
+						  "mark": {
+						  	"type":"bar",
+						  "color":"red"},
 						};
 						var opt = {"renderer": "canvas", "actions": false};
 						vegaEmbed("#vis", spec, opt)
