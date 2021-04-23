@@ -127,7 +127,20 @@
 							"data": {
 								"url": "https://vega.github.io/vega-datasets/data/birdstrikes.csv"
 							},
+							"mark":"rect",
+							"encoding":{
+								"x":{
+									"field":"Time of day"
+									"type":"nominal"
+							},
+							"y":{
+
+							},
+							"color":{
+
+							}
 						}
+					}
 						var opt = {"renderer": "canvas", "actions": false};
 						vegaEmbed("#ex3", spec, opt);
 					</script>
