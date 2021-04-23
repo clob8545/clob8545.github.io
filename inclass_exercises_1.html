@@ -53,6 +53,16 @@
 							"data": {
 								"url": "https://vega.github.io/vega-datasets/data/birdstrikes.csv"
 							},
+							"mark":"bar",
+							"encoding":{
+								"x":{
+									"field":"Origin State",
+									"type":"ordinal"
+								},
+								"y":{
+									"aggregate":"count"
+								},
+							}
 						}
 						var opt = {"renderer": "canvas", "actions": false};
 						vegaEmbed("#ex1", spec, opt);
